@@ -1,2 +1,4 @@
-# TestRepository
-[Day 1 Slideshow](https://docs.google.com/presentation/d/1HEjQ4ieu8HD2KLGG02gQkyqXb_x0VmV-OwCx61TYtgA/edit?usp=sharing)
+# Arduino Learning
+
+Day 1:
+Control an LED with a potentiometer. Clone this repository, and at the end everyone will make a pull request. I'll select one persons code to merge back into the repository for you to see later on.
