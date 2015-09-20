@@ -1,0 +1,40 @@
+#include "mbed.h"
+#include "WiiNunchuck.h"
+#include "Servo.h"
+
+Servo myservo(D5);
+Servo myservo1 (D6);
+Servo myservo2 (D3);
+WiiNunchuck wii(D14, D15);
+DigitalOut myled(LED1);
+
+int main() 
+{  
+    wii.buttonc();
+    wii.buttonz();
+    myservo.position(0);
+    myservo1.position(0);
+    myservo2.position(0);
+    wii.accx()==0;
+    while(1) 
+    {
+        if (wii.buttonc() == 1)
+        {
+            myservo.position(20);
+            myservo1.position(-70);
+            wait(0.01);
+        }
+        if (wii.buttonz() == 1)
+        {
+            myservo.position(-60);
+            myservo1.position(30);
+            wait(0.01);
+        }
+        if (wii.accx() < 0){
+            myservo2.position(-90);
+            }
+        if (wii.accx() > 0){
+            myservo2.position(90);
+            }
+    }
+}
